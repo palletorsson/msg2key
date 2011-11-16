@@ -1,0 +1,87 @@
+/*Defaults Styling*/
+
+body {
+	font:12px/17px Arial, Helvetica, sans-serif; 
+	color:#333; 
+	background:#ccc; 
+	padding:40px 20px 20px 20px;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+fieldset {
+	background:white; 
+	padding:10px; 
+	border:1px 
+	solid #fff; 
+	border-color:#fff #666661 #666661 #fff; 
+	margin-bottom:36px; width:600px;
+	}
+	
+input, textarea, select {
+	font:14px/14px Arial, Helvetica, sans-serif; 
+	padding:10px;
+	}
+
+fieldset.action {
+	background:#9da2a6; 
+	border-color:#e5e5e5 #797c80 #797c80 #e5e5e5; 
+	margin-top:-20px;
+	}
+	
+legend { 
+	background:white; 
+	color:black; 
+	font:17px/21px Calibri, Arial, Helvetica, sans-serif; 
+	padding:10px; 
+	margin:-6px 0 0 -1px; 
+	font-weight:bold; 
+	border:1px solid #fff; 
+	border-color:#e5e5c3 #505014 #505014 #e5e5c3;
+	}
+	
+label {
+	font-size:11px; 
+	font-weight:bold; 
+	color:#666;
+	}
+	
+label.opt {
+	font-weight:normal;
+	}
+	
+dl {
+	clear:both;
+	}
+	
+dt {
+	float:left; 
+	text-align:right; 
+	width:90px; 
+	line-height:25px; 
+	margin:0 10px 10px 0;
+	}
+	
+dd {
+	float:left; 
+	width:475px; 
+	line-height:25px; 
+	margin:0 0 10px 0;
+	}
+
+
+.message {
+	background:white; 
+	color:black; 
+	font:17px/21px Calibri, Arial, Helvetica, sans-serif; 
+	padding:14px; 
+	margin:-6px 0 0 -1px; 
+	font-weight:bold; 
+}
+.message_red {
+	color:red; 
+	font:14px/16px Calibri, Arial, Helvetica, sans-serif; 
+	font-weight:bold; 
+	padding:18px; 
+}
