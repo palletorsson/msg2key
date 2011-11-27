@@ -30,6 +30,7 @@ class Meess{
 	function init($db){
 		$this->db = $db;
 		$this->db->connect();
+		$this->set_shared_key();
 	}
 	
 	
@@ -42,9 +43,20 @@ class Meess{
 		return $result;
 	}	
 	
+	function set_shared_key(){
+		# hard coding the shared key
+		$this->mainkey = "secretkey";
+	}
+	function get_shared_key(){
+		if($this->mainkey){			
+			return $this->mainkey;
+		}
+	}
+	
 	function insert_message($form_message) {
-		$mainkey = "secretkey"; // $this->makekey(); 
-		$this->makekey(); 
+		#$mainkey = "secretkey"; // $this->makekey(); 
+		$mainkey = $this->get_shared_key();
+		$this->makekey();
 		$key = $this->get_user_key();
 		$encrypted_message = $this->encrypt_message($form_message, $key);
 		$encrypted_key = $this->encrypt_message($key, $mainkey);
@@ -75,6 +87,7 @@ class Meess{
 	}
 
 	function getbykey($key) {
+		
 		$sql = "SELECT * FROM messages WHERE keyvalue = 1";
 						#WHERE `keyvalue` = 6237486 
 						#LIMIT 1";
@@ -91,10 +104,12 @@ class Meess{
 		$i = 0;
 		$n = rand(10e16, 10e20);	
 		$n = base_convert($n, 10, 36);	
+		
 		while($this->keyexists($n)){
 			$this->makekey();
 			echo ++$i;
 		}
+		
 		$this->set_user_key($n);
 	}
 

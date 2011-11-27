@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Message2key</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" /> 
+</head>
+<body>     
+	<div class="content">
+	
+
+		<fieldset>
+		  <legend>Insert message</legend>
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+			<h4><textarea name="message" cols="50" rows="3" style="resize: none;" class="textarea" ></textarea></h4>
+			<input type="submit" name="submit_post_msg" id="submit_post_msg" value="Message" class="submit" />
+			</form>
+		</fieldset>	
+		<fieldset>
+		  <legend>Get message</legend>
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+			<h4><input type="text" name="key" cols="60" rows="10" style="resize: none;"></h4>
+			<input type="submit" name="submit_get_msg" id="submit_get_msg" value="Get message" class="submit" />
+			</form>
+		</fieldset>	 		
+	</div>
+	<script src="js/base.js" ></script>
+</body> 
+</html>    

@@ -10,7 +10,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Message2key</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" /> 
+	<link rel="stylesheet" href="css/style.css" type="text/css" /> 
 </head>
 <body>     
 	<div class="content">
@@ -25,11 +25,16 @@
 		?>
 		<fieldset>
 		  <legend>Insert message</legend>
-			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-			<h4><textarea name="message" cols="50" rows="3" style="resize: none;" class="textarea" ></textarea></h4>
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="msgForm" >
+			<h4><textarea id="msgField" name="message" cols="50" rows="3" style="resize: none;" class="textarea" >your message</textarea></h4>
 			<input type="submit" name="submit" value="Message" class="submit" />
 			</form>
-		</fieldset>	
+		</fieldset>
+		<div ><input id="moreOptions" type="checkbox" name="more" value="more"</div>
+		<div id="showMoreOption">More Options</div>
+		<div id="errorMsg"></div> 	
+		<br />
+		
 		<fieldset>
 		  <legend>Get message</legend>
 			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -41,10 +46,6 @@
 		?>
 		
 	</div>
+	<script src="js/validate.js" ></script> 
 </body> 
 </html>    
-
-<?php
-
-?>
-
