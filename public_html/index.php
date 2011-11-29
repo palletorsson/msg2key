@@ -24,24 +24,26 @@
 			} else {	
 		?>
 		<fieldset>
-		  <legend>Insert message</legend>
+		  <legend>Send message</legend>
 			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="msgForm" >
 			<h4><textarea id="msgField" name="message" cols="50" rows="3" style="resize: none;" class="textarea" >your message</textarea></h4>
-			<input type="submit" name="submit" value="Message" class="submit" />
+			<input type="submit" name="submit" id="submitMsg" value="Message" class="submit" />
 			</form>
 		</fieldset>
-		<div ><input id="moreOptions" type="checkbox" name="more" value="more"</div>
+		<div ><input id="moreOptions" type="checkbox" name="more" value="more" checked="yes" </div>
 		<div id="showMoreOption">More Options</div>
 		<div id="errorMsg"></div> 	
 		<br />
 		
 		<fieldset>
 		  <legend>Get message</legend>
-			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-			<h4><input type="text" name="key" cols="60" rows="10" style="resize: none;"></h4>
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="keyForm" >
+			<h4><input type="text" name="key" id="keyField" cols="60" rows="10" style="resize: none;" value="insert key"></h4>
 			<input type="submit" name="submit" value="Get message" class="submit" />
 			</form>
 		</fieldset>	 
+		<div id="errorKey"></div> 	
+		
 		<?php } 
 		?>
 		
